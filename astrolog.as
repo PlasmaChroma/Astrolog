@@ -3,15 +3,15 @@
 ; The contents of this file can be automatically generated with the
 ; "File / Save Settings" menu command, or with the -od command switch.
 
--z 8:00W                ; Default time zone     [hours W or E of UTC   ]
--z0 Autodetect          ; Default Daylight time [0 standard, 1 daylight]
--zl 122W19'59 47N36'35  ; Default location      [longitude and latitude]
+-z 5:00W                ; Default time zone     [hours W or E of UTC   ]
+-z0 1                   ; Default Daylight time [0 standard, 1 daylight]
+-zl  79W59'00 40N26'00  ; Default location      [longitude and latitude]
 -zv 167ft               ; Default elevation     [in feet or meters     ]
 -zf 59F                 ; Default temperature   [in Fahren. or Celsius ]
--zj "Current moment now" "Seattle, WA, USA" ; Default name and location
+-zj "Current moment now" "Pittsburgh, PA, USA" ; Default name and location
 
 -Yz 0   ; Time minute addition to be used if "now" charts are offset.
-;-n      ; Comment out this line to not start with chart for "now".
+-n      ; Comment out this line to not start with chart for "now".
 
 _s      ; Which zodiac to use       ["_s" is tropical, "=s" is sidereal]
 :s Faga ; Sidereal zodiac offset    [Change "Faga" to desired ayanamsa ]
@@ -63,8 +63,8 @@ _Yv     ; European length units     ["_Yv" is imperial, "=Yv" is metric]
 ; 84-133: Fixed stars
 
 -YR 0 10     1 0 0 0 0 0 0 0 0 0 0    ; Planets
--YR 11 21    1 1 1 1 1 0 1 1 1 1 1    ; Minor planets
--YR 22 33    0 1 1 1 1 1 1 1 1 0 1 1  ; House cusps
+-YR 11 21    0 0 0 0 0 0 0 0 0 0 0    ; Minor planets
+-YR 22 33    1 1 1 1 1 1 1 1 1 1 1 1  ; House cusps
 -YR 34 42    1 1 1 1 1 1 1 1 1        ; Uranians
 -YR 43 51    1 1 1 1 1 1 1 1 1        ; Dwarfs
 -YR 52 78    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  ; Moons
@@ -75,7 +75,7 @@ _Yv     ; European length units     ["_Yv" is imperial, "=Yv" is metric]
 ; DEFAULT TRANSIT RESTRICTIONS:
 
 -YRT 0 10    1 0 1 0 0 0 0 0 0 0 0    ; Planets
--YRT 11 21   1 1 1 1 1 0 1 1 1 1 1    ; Minor planets
+-YRT 11 21   0 1 1 0 1 0 1 1 1 1 1    ; Minor planets
 -YRT 22 33   1 1 1 1 1 1 1 1 1 1 1 1  ; House cusps
 -YRT 34 42   1 1 1 1 1 1 1 1 1        ; Uranians
 -YRT 43 51   1 1 1 1 1 1 1 1 1        ; Dwarfs
@@ -98,8 +98,8 @@ _Yv     ; European length units     ["_Yv" is imperial, "=Yv" is metric]
 ; 12-18: SQn Sep Nov BNv BSp TSp QNv
 ; 19-24: TDc Un1 Un2 Un3 Un4 Un5
 
--YAo 1 5     7 7 7 7 6      ; Major aspects
--YAo 6 11    3 3 3 3 2 2    ; Minor aspects
+-YAo 1 5     7 7 7 7 7      ; Major aspects
+-YAo 6 11    6 3 3 3 2 2    ; Minor aspects
 -YAo 12 18   1 1 1 1 1 1 1  ; Obscure aspects
 -YAo 19 24   0.5 0.5 0.5 0.5 0.5 0.5  ; Very obscure aspects
 
@@ -175,7 +175,7 @@ _Yv     ; European length units     ["_Yv" is imperial, "=Yv" is metric]
 -YkA 6 11   Mag Mag Ora Ora DkC DkC      ; Minor aspect colors
 -YkA 12 18  DkC Mar Pur Pur Mar Mar Pur  ; Obscure aspect colors
 
--YkC        Red Yel Gre Blu                      ; Element colors
+-YkC        Red Gre Yel Blu                      ; Element colors
 -Yk7 1 7    Red Blu Gre Yel Ora Mag Pur          ; Ray colors
 -Yk0 1 7    Red Ora Yel Gre Cya Blu Pur          ; Rainbow colors
 -Yk  0 8    Bla Whi LtG Gra Mar DkG DkC DkB Mag  ; Main colors
@@ -195,9 +195,9 @@ _Yv     ; European length units     ["_Yv" is imperial, "=Yv" is metric]
 
 _XJ              ; Indian type wheels ["_XJ" is Western, "=XJ" is Indian  ]
 =Xm              ; Color charts       ["=Xm" is color, "_Xm" is monochrome]
-_Xr              ; Reverse background ["_Xr" is black, "=Xr" is white     ]
-:Xw 600 600      ; Default X and Y resolution (not including sidebar)
-:Xs 200          ; Character scale     [100-400]
+=Xr              ; Reverse background ["_Xr" is black, "=Xr" is white     ]
+:Xw 1245 1245      ; Default X and Y resolution (not including sidebar)
+:Xs 300          ; Character scale     [100-400]
 :XS 100          ; Graphics text scale [100-400]
 =XQ              ; Square charts ["=XQ" forces square, "_XQ" allows rectangle]
 =Xu              ; Chart border  ["=Xu" shows border, "_Xu" doesn't show     ]
@@ -209,10 +209,10 @@ _Xx              ; Thicker lines ["=Xx" is thicker, "_Xx" is thinner         ]
 :YXS 0.0         ; Orbit radius in AU ["0.0" for autodetect]
 :YXj 0           ; Orbit trail count
 :YX7 600         ; Esoteric ray column influence width
-:YXf 000000      ; Fonts to use [text, signs, houses, planets, aspects, naks.]
+:YXf 025520      ; Fonts to use [text, signs, houses, planets, aspects, naks.]
 :YXp 0           ; PostScript paper orientation ["-1" portrait, "1" landscape]
 :YXp0 8.5in 11in ; PostScript paper X and Y sizes
 
-_X               ; Graphics chart display ["_X" is text, "=X" is graphics]
+=X               ; Graphics chart display ["_X" is text, "=X" is graphics]
 
 ; astrolog.as

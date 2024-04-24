@@ -63,13 +63,13 @@
 ** can be disabled even if you are running a system that supports X windows.
 */
 
-//#define PC /* Comment out this #define if you have a Unix, Mac, or other */
+#define PC /* Comment out this #define if you have a Unix, Mac, or other */
            /* system that isn't a generic PC running DOS or MS Windows.  */
 
-#define X11 /* Comment out this #define if you don't have X windows, or */
+//#define X11 /* Comment out this #define if you don't have X windows, or */
             /* else have them and don't wish to compile in X graphics.  */
 
-//#define WIN /* Comment out this #define if you don't have MS Windows, or */
+#define WIN /* Comment out this #define if you don't have MS Windows, or */
             /* else have them but want a command line version instead.   */
 
 //#define WCLI /* Comment out this #define if you don't want to compile a    */
@@ -212,7 +212,8 @@
   // Name of file to look in for default program settings (which will override
   // the compile time values here, if the file exists).
 
-#define DEFAULT_ATLASFILE "atlas.as"
+//#define DEFAULT_ATLASFILE "atlas.as"
+#define DEFAULT_ATLASFILE "atlasbig.as"
   // Name of file to look in for default atlas city and time zone list.
 
 #define DEFAULT_TIMECHANGE "timezone.as"
